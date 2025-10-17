@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en"class="fontawesome-i2svg-active fontawesome-i2svg-complete">
+<head>
+  <meta property="og:title" content= "Diffusion Bridge Networks Simulate Clinical-grade PET from MRI for Dementia Diagnostics">
+  <meta property="og:description" content="3D MRI-to-PET simulated with denoising diffusion bridges under clinical validation on differential diagnosis of dementia">
+  <meta property="og:url" content="https://Yiiitong.github.io/SiM2P/">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="description"
+        content="3D MRI-to-PET simulated with denoising diffusion bridges under clinical validation on differential diagnosis of dementia">
+  <meta name="keywords" content="SiM2P">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="https://Yiiitong.github.io/SiM2P/images/6-medical-nn.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <title>Diffusion Bridge Networks Simulate Clinical-grade PET from MRI for Dementia Diagnostics</title>
+
+  <link rel="icon" type="image/x-icon" href="./static/images/6-medical-nn.png">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <link href="./assets/css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/dropdown.css">
+  <link rel="stylesheet" href="./assets/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./assets/css/bulma-slider.min.css">
+
+  <link rel="stylesheet" href="./assets/css/tab_gallery.css">
+  <!-- <link rel="stylesheet" href="./assets/css/fontawesome.all.min.css"> -->
+  <link rel="stylesheet" href="./assets/css/academicons.min.css">
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <link rel="stylesheet" href="./assets/css/juxtapose.css">
+  <link rel="stylesheet" href="./assets/css/image_card_fader.css">
+  <link rel="stylesheet" href="./assets/css/image_card_slider.css">
+  <link rel="stylesheet" href="./assets/css/gallery.css">
+  <link href='https://fonts.googleapis.com/css?family=Monoton' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Akronim' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Sofia ' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=VT323 ' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Playfair Display ' rel='stylesheet'>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Diffusion Bridge Networks<br> Simulate Clinical-grade PET from MRI<br> for Dementia Diagnostics</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://yiiitong.github.io/">Yitong Li</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.uke.de/english/physicians-and-scientists/wissenschaftlerprofilseite_ralph_buchert.html">Ralph Buchert</a><sup>3</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.neurokopfzentrum.med.tum.de/neuroradiologie/mitarbeiter-profil-schmitz-koep.html">Benita Schmitz-Koep</a><sup>4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://psychiatrie.mri.tum.de/en/team/prof-dr-med-timo_grimmer">Timo Grimmer</a><sup>5</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://ommer-lab.com/ommer/">Björn Ommer</a><sup>2,6</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.neurokopfzentrum.med.tum.de/neuroradiologie/mitarbeiter-profil-hedderich.html">Dennis M. Hedderich</a><sup>‡4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://nuklearmedizin.mri.tum.de/de/lebenslauf-pd-dr-med-igor-yakushev">Igor Yakushev</a><sup>‡7</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://ai-med.de/people/christian-wachinger/">Christian Wachinger</a><sup>‡1,2</sup>
+            </span>
+          </span>
+          <span class="eql-cntrb"><small><br><sup>‡</sup>Shared senior authors.</small></span>
+          </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Lab for AI in Medical Imaging, Technical University of Munich (TUM), Germany</span>
+            <span class="author-block"><sup>2</sup>Munich Center for Machine Learning (MCML), Germany</span>
+            <span class="author-block"><sup>3</sup>Department of Nuclear Medicine, University Medical Center Hamburg-Eppendorf, Germany</span>
+            <span class="author-block"><sup>4</sup>Department of Neuroradiology, TUM University Hospital, Germany</span>
+            <span class="author-block"><sup>5</sup>Department of Neurology, TUM University Hospital, Germany</span>
+            <span class="author-block"><sup>6</sup>CompVis, Ludwig-Maximilians-University Munich (LMU), Germany</span>
+            <span class="author-block"><sup>7</sup>Department of Nuclear Medicine, TUM University Hospital, Germany</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/Yiiitong/SiM2P"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="hero is-small" style="padding: 0">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+      <div class="has-text-justified">
+        <h2 class="title is-3 has-text-centered">SiM2P simulates PET from MRI with high fidelity</h2>
+        <p class="notation">
+          (<strong>AD</strong>: Alzheimer's Disease, <strong>FTD</strong>: Frontotemporal Dementia, <strong>CN</strong>: Normal Control)
+        <br>
+      </div>
+      
+      <!-- row 1 -->
+      <div class="columns is-centered">
+        <div class="column">
+
+
+          <div class="has-text-justified">
+            <p>
+              <span style="font-family:roboto; ">82 years old female with <strong>AD</strong></span>
+            </p>
+          </div>
+          <div class="content">
+            <div class="tab_container">
+              <div id="juxtapose-embed2" data-startingposition="30%" data-animate="true" class="juxtapose">
+                <div class="jx-slider">
+                  <div class="jx-handle " style="left: 54.53%;">
+                    <div class="jx-arrow jx-left"></div>
+                    <div class="jx-control">
+                      <div class="jx-controller" tabindex="0" role="slider" aria-valuenow="50" aria-valuemin="0"
+                        aria-valuemax="100" aria-label="Image juxtapose slider"></div>
+                    </div>
+                    <div class="jx-arrow jx-right"></div>
+                  </div>
+                  <div class="jx-image jx-left " style="width: 54.53%;">
+                    <img src="./images/MRI/s-0306-01-000189_AD_mri_slice40.png" alt="" data-label="MRI">
+                </div>
+                <div class="jx-image jx-right " style="width: 45.47%;">
+                  <img src="./images/syn_PET/s-0306-01-000189_AD_syn_pet_slice40.png" alt="" data-label="SiM2P">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="has-text-justified">
+            <p>
+              <span style="font-family:roboto; ">66 years old female with <strong>AD</strong></span>
+            </p>
+          </div>
+          <div class="content">
+            <div class="tab_container">
+              <div id="juxtapose-embed2" data-startingposition="30%" data-animate="true" class="juxtapose">
+                <div class="jx-slider">
+                  <div class="jx-handle " style="left: 54.53%;">
+                    <div class="jx-arrow jx-left"></div>
+                    <div class="jx-control">
+                      <div class="jx-controller" tabindex="0" role="slider" aria-valuenow="50" aria-valuemin="0"
+                        aria-valuemax="100" aria-label="Image juxtapose slider"></div>
+                    </div>
+                    <div class="jx-arrow jx-right"></div>
+                  </div>
+                  <div class="jx-image jx-left " style="width: 54.53%;">
+                    <img src="./images/MRI/kb_241258_anat_hc_AD_mri_slice40.png" alt="" data-label="MRI">
+                </div>
+                <div class="jx-image jx-right " style="width: 45.47%;">
+                  <img src="./images/syn_PET/kb_241258_anat_hc_AD_syn_pet_slice40.png" alt="" data-label="SiM2P">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+  
+
+        </div>
+        <div class="column">
+
+          <div class="has-text-justified">
+            <p>
+              <span style="font-family:roboto; ">71 years old male with <strong>FTD</strong></span>
+            </p>
+          </div>
+          <div class="content">
+            <div class="tab_container">
+              <div id="juxtapose-embed2" data-startingposition="30%" data-animate="true" class="juxtapose">
+                <div class="jx-slider">
+                  <div class="jx-handle " style="left: 54.53%;">
+                    <div class="jx-arrow jx-left"></div>
+                    <div class="jx-control">
+                      <div class="jx-controller" tabindex="0" role="slider" aria-valuenow="50" aria-valuemin="0"
+                        aria-valuemax="100" aria-label="Image juxtapose slider"></div>
+                    </div>
+                    <div class="jx-arrow jx-right"></div>
+                  </div>
+                  <div class="jx-image jx-left " style="width: 54.53%;">
+                    <img src="./images/MRI/sa_262151_anat_hc_FTD_mri_slice40.png" alt="" data-label="MRI">
+                </div>
+                <div class="jx-image jx-right " style="width: 45.47%;">
+                  <img src="./images/syn_PET/sa_262151_anat_hc_FTD_syn_pet_slice40.png" alt="" data-label="SiM2P">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="has-text-justified">
+            <p>
+              <span style="font-family:roboto; ">60 years old female with <strong>FTD</strong></span>
+            </p>
+          </div>
+          <div class="content">
+            <div class="tab_container">
+              <div id="juxtapose-embed1" data-startingposition="30%" data-animate="true" class="juxtapose">
+                <div class="jx-slider">
+                  <div class="jx-handle " style="left: 54.53%;">
+                    <div class="jx-arrow jx-left"></div>
+                    <div class="jx-control">
+                      <div class="jx-controller" tabindex="0" role="slider" aria-valuenow="50" aria-valuemin="0"
+                        aria-valuemax="100" aria-label="Image juxtapose slider"></div>
+                    </div>
+                    <div class="jx-arrow jx-right"></div>
+                  </div>
+                  <div class="jx-image jx-left " style="width: 54.53%;">
+                    <img src="./images/MRI/s-0306-01-000170_FTD_mri_slice40.png" alt="" data-label="MRI">
+                  </div>
+                  <div class="jx-image jx-right " style="width: 45.47%;">
+                    <img src="./images/syn_PET/s-0306-01-000170_FTD_syn_pet_slice40.png" alt="" data-label="SiM2P">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+
+
+
+        </div>
+        <div class="column">
+          <div class="has-text-justified">
+            <p>
+              <span style="font-family:roboto; ">69 years old female as <strong>CN</strong></span>
+
+            </p>
+          </div>
+          <div class="content">
+            <div class="tab_container">
+              <div id="juxtapose-embed1" data-startingposition="30%" data-animate="true" class="juxtapose">
+                <div class="jx-slider">
+                  <div class="jx-handle " style="left: 54.53%;">
+                    <div class="jx-arrow jx-left"></div>
+                    <div class="jx-control">
+                      <div class="jx-controller" tabindex="0" role="slider" aria-valuenow="50" aria-valuemin="0"
+                        aria-valuemax="100" aria-label="Image juxtapose slider"></div>
+                    </div>
+                    <div class="jx-arrow jx-right"></div>
+                  </div>
+                  <div class="jx-image jx-left " style="width: 54.53%;">
+                    <img src="./images/MRI/291936_CN_mri_slice40.png" alt="" data-label="MRI">
+                </div>
+                <div class="jx-image jx-right " style="width: 45.47%;">
+                  <img src="./images/syn_PET/291936_CN_syn_pet_slice40.png" alt="" data-label="SiM2P">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          
+
+          <div class="has-text-justified">
+            <p>
+              <span style="font-family:roboto;">70 years old male as <strong>CN</strong></span>
+            </p>
+          </div>
+          <div class="content">
+            <div class="tab_container">
+              <div id="juxtapose-embed1" data-startingposition="30%" data-animate="true" class="juxtapose">
+                <div class="jx-slider">
+                  <div class="jx-handle " style="left: 54.53%;">
+                    <div class="jx-arrow jx-left"></div>
+                    <div class="jx-control">
+                      <div class="jx-controller" tabindex="0" role="slider" aria-valuenow="50" aria-valuemin="0"
+                        aria-valuemax="100" aria-label="Image juxtapose slider"></div>
+                    </div>
+                    <div class="jx-arrow jx-right"></div>
+                  </div>
+                  <div class="jx-image jx-left " style="width: 54.53%;">
+                    <img src="./images/MRI/rj_432152_anat_hc_CN_mri_slice40.png" alt="" data-label="MRI">
+                  </div>
+                  <div class="jx-image jx-right " style="width: 45.47%;">
+                    <img src="./images/syn_PET/rj_432152_anat_hc_CN_syn_pet_slice40.png" alt="" data-label="SiM2P">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+
+<!-- Examples. -->
+
+<section class="section columns_video" id="clinical_study" style="display: flex; justify-content: space-between; align-items: center; margin:5%;">
+  <!-- Left side: Caption -->
+  <div class="text-section col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="padding: 5%;">
+      <h1 style="font-size: 2em;">Diffusion Bridge Framework</h1>
+      <br>
+      <p>
+        SiM2P employs a 3D diffusion bridge to simulate PET (SimPET) from structural MRI, conditioned on available auxiliary data. 
+        We validated the diagnostic utility of SimPET in a blinded clinical reader study, where SimPET showed significantly higher accuracy than MRI.  
+      </p>
+  </div>
+
+  <!-- Right: image -->
+  <div class="image-section" style="flex:0 0 auto;">
+    <img src="./images/cases/archi_sim2p.svg" 
+        alt="Enhanced Diagnostic Accuracy" 
+        style="width:800px !important; height:auto; border-radius:12px;">
+  </div>
+</section>
+
+<section class="section columns_video" id="clinical_study" style="display: flex; justify-content: space-between; align-items: center; margin:5%;">
+  <!-- Left side: Caption -->
+  <div class="text-section col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="padding: 5%;">
+      <h1 style="font-size: 2em;">Improved Diagnostic Accuracy</h1>
+      <br>
+      <p>
+        In a blinded <a href="#" style="color: #6366f1;"><strong>clinical reader study</strong></a>, SimPET from SiM2P improved diagnostic
+        accuracy by up to 12% over MRI across a range of tasks, with substantially increased interrater reliability. 
+      </p>
+  </div>
+
+  <!-- Right: image -->
+  <div class="image-section" style="flex:0 0 auto;">
+    <img src="./images/cases/clinical_reader_study.svg" 
+        alt="Enhanced Diagnostic Accuracy" 
+        style="width:800px !important; height:auto; border-radius:12px;">
+  </div>
+</section>
+
+<section class="section columns_video" id="specificity" style="display: flex; justify-content: space-between; align-items: center; margin:5%;">
+    <!-- left be caption -->
+    <div class="text-section col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="padding: 5%;">
+      <h1 style="font-size: 2rem;">High Pathological Sensitivity</h1>
+      <br>
+      <p>
+        SiM2P offers high <a href="#" style="color: #6366f1;"><strong>pathological sensitivity</strong></a> even in scenarios where structural MRI lacks
+        sufficient pathological atrophy, such as in early-stage or atypical presentations of AD.
+      </p>
+    </div>
+    <!-- Right: image -->
+    <div class="image-section" style="flex:0 0 auto;">
+      <img src="./images/cases/caseAB.svg" 
+          alt="SiM2P with high pathological specificity" 
+          style="width:800px !important; height:auto; border-radius:12px;">
+    </div>
+ </section>
+
+
+<section class="section columns_video" id="local_adapt" style="display: flex; justify-content: space-between;align-items: center; margin:5%;">
+  <!-- left be caption -->
+  <div class="text-section col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="padding: 5%;">
+    <h1 style="font-size: 2em;">Local Deployment</h1>
+    <br>
+    <p>
+      With <a href="#" style="color: #6366f1;""><strong>Local-Adapt</strong></a>, clinical sites can calibrate publicly pre-trained SiM2P models 
+      with as few as 20 local samples, while maintaining high-quality and accurate site-specific PET synthesis. 
+    </p>
+  </div>
+  <!-- Right: image -->
+  <div class="image-section" style="flex:0 0 auto;">
+    <img src="./images/cases/local_adapt.svg" 
+        alt="local adapt performance" 
+        style="width:800px !important; height:auto; border-radius:12px;">
+  </div>
+</section>
+  
+
+
+
+<section class="section" style="background-color: #f5f5f5;">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column ">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+           <p>
+            Positron emission tomography (PET) with 18-Fluorodeoxyglucose (FDG) is an established tool in the diagnostic workup of patients with suspected dementing disorders. However, compared to the routinely available magnetic resonance imaging (MRI), FDG-PET remains significantly less accessible and substantially more expensive.      
+          </p>
+          <p>
+            Here, we present SiM2P, a 3D diffusion bridge-based framework that learns a probabilistic mapping from MRI and auxiliary patient information to simulate FDG-PET images of diagnostic quality.
+          </p>
+          <p>
+            In a blinded clinical reader study, two neuroradiologists and two nuclear medicine physicians rated the original MRI and SiM2P-simulated PET images of patients with Alzheimer's disease, behavioral-variant frontotemporal dementia, and cognitively healthy controls. SiM2P significantly improved the overall diagnostic accuracy of differentiating between three groups from 75.0% to 84.7%  (p<0.05). Notably, the simulated PET images received higher diagnostic certainty ratings and achieved superior interrater agreement compared to original MRI images alone.
+          </p>
+          <p>
+            Finally, we developed a practical workflow for local deployment of the SiM2P framework. It requires as few as 20 site-specific cases and only basic demographic information. This approach makes the established diagnostic benefits of FDG-PET imaging more accessible to patients with suspected dementing disorders, potentially improving early detection and differential diagnosis in resource-limited settings. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+
+
+  <script>
+    function toggleAttention() {
+      const imgElement = document.getElementById('dynamicImage');
+      const btnElement = document.getElementById('toggleAttention');
+
+      let srcPath = imgElement.src;
+      let baseName = srcPath.substring(srcPath.lastIndexOf('/') + 1);
+
+      if (baseName.endsWith('_attention.png')) {
+        let newBaseName = baseName.replace('_attention.png', '.png');
+        imgElement.src = srcPath.replace(baseName, newBaseName);
+        btnElement.textContent = 'Show Model Attention';
+      } else {
+        let newBaseName = baseName.replace('.png', '_attention.png');
+        imgElement.src = srcPath.replace(baseName, newBaseName);
+        btnElement.textContent = 'Hide Model Attention';
+      }
+    }
+  </script>
+
+
+
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{li2025simulated,
+  author    = {},
+  title     = {Diffusion Bridge Networks Simulate Clinical-grade PET from MRI for Dementia Diagnostics},
+}</code></pre>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/Yiiitong/SiM2P" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page was adopted from the <a href="https://microsoft.github.io/BiomedParse/" target="_blank">BiomedParse</a> project page.
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/" style="color: #000000; text-decoration: underline;">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+            This means you are free to borrow the source code of this website,
+            we just ask that you link back to this page in the footer.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="./assets/js/juxtapose.js"></script>
+  <script src="./assets/js/popper.min.js"></script>
+  <script src="./assets/js/jquery.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <script defer="" src="./assets/js/fontawesome.all.min.js"></script>
+  <script src="./assets/js/bulma-carousel.min.js"></script>
+  <script src="./assets/js/bulma-slider.min.js"></script>
+  <script src="./assets/js/dropdown.js"></script>
+
+</body>
+</html>
