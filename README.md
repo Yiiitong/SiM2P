@@ -2,6 +2,8 @@
 
 Official Implementation of Diffusion Bridge Networks Simulate Clinical-grade PET from MRI for Dementia Diagnostics.
 
+[Project Page](https://yiiitong.github.io/SiM2P/)
+
 <p align="center">
   <img src="img/archi_sim2p.svg" width="100%"/>
 </p>
