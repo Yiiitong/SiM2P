@@ -354,7 +354,7 @@
 
 <!-- Examples. -->
 
-<section class="section" id="clinical_study_overview">
+<!-- <section class="section" id="clinical_study_overview">
   <div class="text-section">
     <h1>Diffusion Bridge Framework</h1>
     <p>
@@ -404,19 +404,19 @@
   <div class="image-section">
     <img src="./images/cases/local_adapt.svg" alt="Local-Adapt performance across sites">
   </div>
-</section>
+</section> -->
 
-<!-- <section class="section columns_video" id="clinical_study" style="display: flex; justify-content: space-between; align-items: center; margin:5%;">
 
+
+<section class="section columns_video" id="clinical_study" style="display: flex; justify-content: space-between; align-items: center; margin:5%;">
   <div class="text-section col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="padding: 5%;">
       <h1 style="font-size: 2em;">Diffusion Bridge Framework</h1>
       <br>
       <p>
-        SiM2P employs a 3D diffusion bridge to simulate PET (SimPET) from structural MRI, conditioned on available auxiliary data. 
+        SiM2P employs a <a href="https://arxiv.org/html/2510.15556v1#S4:~:text=SiM2P%20translation%20framework"><strong>3D diffusion bridge</strong></a> to simulate PET (SimPET) from structural MRI, conditioned on available auxiliary data. 
         We validated the diagnostic utility of SimPET in a blinded clinical reader study, where SimPET showed significantly higher accuracy than MRI.  
       </p>
   </div>
-
   <div class="image-section" style="flex:0 0 auto;">
     <img src="./images/cases/archi_sim2p.svg" 
         alt="Enhanced Diagnostic Accuracy" 
@@ -425,17 +425,14 @@
 </section>
 
 <section class="section columns_video" id="clinical_study" style="display: flex; justify-content: space-between; align-items: center; margin:5%;">
-
   <div class="text-section col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="padding: 5%;">
       <h1 style="font-size: 2em;">Improved Diagnostic Accuracy</h1>
       <br>
       <p>
-        In a blinded <a href="#" style="color: #6366f1;"><strong>clinical reader study</strong></a>, SimPET from SiM2P improved diagnostic
+        In a blinded <a href="https://arxiv.org/html/2510.15556v1#:~:text=2.2-,Clinical%20reader%20study,-Figure%202%3A" style="color: #6366f1;"><strong>clinical reader study</strong></a>, SimPET from SiM2P improved diagnostic
         accuracy by up to 12% over MRI across a range of tasks, with substantially increased interrater reliability. 
       </p>
   </div>
-
-
   <div class="image-section" style="flex:0 0 auto;">
     <img src="./images/cases/clinical_reader_study.svg" 
         alt="Enhanced Diagnostic Accuracy" 
@@ -444,16 +441,14 @@
 </section>
 
 <section class="section columns_video" id="specificity" style="display: flex; justify-content: space-between; align-items: center; margin:5%;">
-
     <div class="text-section col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="padding: 5%;">
       <h1 style="font-size: 2rem;">High Pathological Sensitivity</h1>
       <br>
       <p>
-        SiM2P offers high <a href="#" style="color: #6366f1;"><strong>pathological sensitivity</strong></a> even in scenarios where structural MRI lacks
+        SiM2P offers high <a href="https://arxiv.org/html/2510.15556v1#:~:text=Simulated%20PET%20provided%20higher%20sensitivity%20for%20dementia%20disorders%2C%20particularly%20AD." style="color: #6366f1;"><strong>pathological sensitivity</strong></a> even in scenarios where structural MRI lacks
         sufficient pathological atrophy, such as in early-stage or atypical presentations of AD.
       </p>
     </div>
-
     <div class="image-section" style="flex:0 0 auto;">
       <img src="./images/cases/caseAB.svg" 
           alt="SiM2P with high pathological specificity" 
@@ -462,22 +457,20 @@
  </section>
 
 <section class="section columns_video" id="local_adapt" style="display: flex; justify-content: space-between;align-items: center; margin:5%;">
-
   <div class="text-section col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="padding: 5%;">
     <h1 style="font-size: 2em;">Local Deployment</h1>
     <br>
     <p>
-      With <a href="#" style="color: #6366f1;""><strong>Local-Adapt</strong></a>, clinical sites can calibrate publicly pre-trained SiM2P models 
+      With <a href="https://arxiv.org/html/2510.15556v1#:~:text=Clinical%20deployment%20on%20the%20local%20cohort" style="color: #6366f1;""><strong>Local-Adapt</strong></a>, clinical sites can calibrate publicly pre-trained SiM2P models 
       with as few as 20 local samples, while maintaining high-quality and accurate site-specific PET synthesis. 
     </p>
   </div>
-
   <div class="image-section" style="flex:0 0 auto;">
     <img src="./images/cases/local_adapt.svg" 
         alt="local adapt performance" 
         style="width:800px !important; height:auto; border-radius:12px;">
   </div>
-</section> -->
+</section>
   
 
 
@@ -539,14 +532,15 @@
     <h2 class="title">BibTeX</h2>
     <pre><code>
       @article{li2025diffusion,
-      title={Diffusion Bridge Networks Simulate Clinical-grade PET from MRI for Dementia Diagnostics}, 
-      author={Yitong Li and Ralph Buchert and Benita Schmitz-Koep and Timo Grimmer and Björn Ommer and Dennis M. Hedderich and Igor Yakushev and Christian Wachinger},
-      year={2025},
-      eprint={2510.15556},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2510.15556}, 
-}</code></pre>
+        title={Diffusion Bridge Networks Simulate Clinical-grade PET from MRI for Dementia Diagnostics}, 
+        author={Yitong Li and Ralph Buchert and Benita Schmitz-Koep and Timo Grimmer and Björn Ommer and Dennis M. Hedderich and Igor Yakushev and Christian Wachinger},
+        year={2025},
+        eprint={2510.15556},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV},
+        url={https://arxiv.org/abs/2510.15556}, 
+      }
+    </code></pre>
   </div>
 </section>
 
@@ -555,7 +549,7 @@
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="./static/paper.pdf">
+         href="https://arxiv.org/abs/2510.15556">
         <i class="fas fa-file-pdf"></i>
       </a>
       <a class="icon-link" href="https://github.com/Yiiitong/SiM2P" class="external-link" disabled>
