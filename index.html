@@ -354,8 +354,60 @@
 
 <!-- Examples. -->
 
-<section class="section columns_video" id="clinical_study" style="display: flex; justify-content: space-between; align-items: center; margin:5%;">
-  <!-- Left side: Caption -->
+<section class="section" id="clinical_study_overview">
+  <div class="text-section">
+    <h1>Diffusion Bridge Framework</h1>
+    <p>
+      SiM2P employs a <a href="https://arxiv.org/html/2510.15556v1#S4:~:text=SiM2P%20translation%20framework"><strong>3D diffusion bridge</strong></a> to simulate PET (SimPET) from structural MRI, conditioned on available auxiliary data.
+      We validated the diagnostic utility of SimPET in a blinded clinical reader study, where SimPET showed significantly higher accuracy than MRI.
+    </p>
+  </div>
+  <div class="image-section">
+    <img src="./images/cases/archi_sim2p.svg" alt="Diffusion bridge architecture for SimPET generation">
+  </div>
+</section>
+
+<section class="section" id="clinical_study_results">
+  <div class="text-section">
+    <h1>Improved Diagnostic Accuracy</h1>
+    <p>
+      In a blinded <a href="https://arxiv.org/html/2510.15556v1#:~:text=2.2-,Clinical%20reader%20study,-Figure%202%3A"><strong>clinical reader study</strong></a>, SimPET from SiM2P improved diagnostic
+      accuracy by up to 12% over MRI across a range of tasks, with substantially increased interrater reliability.
+    </p>
+  </div>
+  <div class="image-section">
+    <img src="./images/cases/clinical_reader_study.svg" alt="Clinical reader study results showing improved accuracy">
+  </div>
+</section>
+
+<section class="section" id="pathological_sensitivity">
+  <div class="text-section">
+    <h1>High Pathological Sensitivity</h1>
+    <p>
+      SiM2P offers high <a href="https://arxiv.org/html/2510.15556v1#:~:text=Simulated%20PET%20provided%20higher%20sensitivity%20for%20dementia%20disorders%2C%20particularly%20AD."><strong>pathological sensitivity</strong></a> even in scenarios where structural MRI lacks
+      sufficient pathological atrophy, such as in early-stage or atypical presentations of AD.
+    </p>
+  </div>
+  <div class="image-section">
+    <img src="./images/cases/caseAB.svg" alt="Cases demonstrating high pathological sensitivity of SiM2P">
+  </div>
+</section>
+
+<section class="section" id="local_adapt">
+  <div class="text-section">
+    <h1>Local Deployment</h1>
+    <p>
+      With <a href="https://arxiv.org/html/2510.15556v1#:~:text=Clinical%20deployment%20on%20the%20local%20cohort"><strong>Local-Adapt</strong></a>, clinical sites can calibrate publicly pre-trained SiM2P models
+      with as few as 20 local samples, while maintaining high-quality and accurate site-specific PET synthesis.
+    </p>
+  </div>
+  <div class="image-section">
+    <img src="./images/cases/local_adapt.svg" alt="Local-Adapt performance across sites">
+  </div>
+</section>
+
+<!-- <section class="section columns_video" id="clinical_study" style="display: flex; justify-content: space-between; align-items: center; margin:5%;">
+
   <div class="text-section col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="padding: 5%;">
       <h1 style="font-size: 2em;">Diffusion Bridge Framework</h1>
       <br>
@@ -365,7 +417,6 @@
       </p>
   </div>
 
-  <!-- Right: image -->
   <div class="image-section" style="flex:0 0 auto;">
     <img src="./images/cases/archi_sim2p.svg" 
         alt="Enhanced Diagnostic Accuracy" 
@@ -374,7 +425,7 @@
 </section>
 
 <section class="section columns_video" id="clinical_study" style="display: flex; justify-content: space-between; align-items: center; margin:5%;">
-  <!-- Left side: Caption -->
+
   <div class="text-section col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="padding: 5%;">
       <h1 style="font-size: 2em;">Improved Diagnostic Accuracy</h1>
       <br>
@@ -384,7 +435,7 @@
       </p>
   </div>
 
-  <!-- Right: image -->
+
   <div class="image-section" style="flex:0 0 auto;">
     <img src="./images/cases/clinical_reader_study.svg" 
         alt="Enhanced Diagnostic Accuracy" 
@@ -393,7 +444,7 @@
 </section>
 
 <section class="section columns_video" id="specificity" style="display: flex; justify-content: space-between; align-items: center; margin:5%;">
-    <!-- left be caption -->
+
     <div class="text-section col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="padding: 5%;">
       <h1 style="font-size: 2rem;">High Pathological Sensitivity</h1>
       <br>
@@ -402,7 +453,7 @@
         sufficient pathological atrophy, such as in early-stage or atypical presentations of AD.
       </p>
     </div>
-    <!-- Right: image -->
+
     <div class="image-section" style="flex:0 0 auto;">
       <img src="./images/cases/caseAB.svg" 
           alt="SiM2P with high pathological specificity" 
@@ -410,9 +461,8 @@
     </div>
  </section>
 
-
 <section class="section columns_video" id="local_adapt" style="display: flex; justify-content: space-between;align-items: center; margin:5%;">
-  <!-- left be caption -->
+
   <div class="text-section col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="padding: 5%;">
     <h1 style="font-size: 2em;">Local Deployment</h1>
     <br>
@@ -421,18 +471,18 @@
       with as few as 20 local samples, while maintaining high-quality and accurate site-specific PET synthesis. 
     </p>
   </div>
-  <!-- Right: image -->
+
   <div class="image-section" style="flex:0 0 auto;">
     <img src="./images/cases/local_adapt.svg" 
         alt="local adapt performance" 
         style="width:800px !important; height:auto; border-radius:12px;">
   </div>
-</section>
+</section> -->
   
 
 
 
-<section class="section" style="background-color: #f5f5f5;">
+<section class="section section--full" style="background-color: #f5f5f5;">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
@@ -484,15 +534,21 @@
 
 
 
-<!-- <section class="section" id="BibTeX">
+<section class="section section--full" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{li2025simulated,
-  author    = {},
-  title     = {Diffusion Bridge Networks Simulate Clinical-grade PET from MRI for Dementia Diagnostics},
+    <pre><code>
+      @article{li2025diffusion,
+      title={Diffusion Bridge Networks Simulate Clinical-grade PET from MRI for Dementia Diagnostics}, 
+      author={Yitong Li and Ralph Buchert and Benita Schmitz-Koep and Timo Grimmer and Björn Ommer and Dennis M. Hedderich and Igor Yakushev and Christian Wachinger},
+      year={2025},
+      eprint={2510.15556},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2510.15556}, 
 }</code></pre>
   </div>
-</section> -->
+</section>
 
 
 <footer class="footer">

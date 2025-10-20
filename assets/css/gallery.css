@@ -45,3 +45,73 @@
     text-align: center;
     z-index: 3; /* Ensures text is on top of the overlay */
 }
+
+
+
+:root {
+--page-max: 1200px;
+--radius: 12px;
+--gap: clamp(16px, 3vw, 32px);
+--section-pad: clamp(8px, 2vw, 24px);
+--section-margin: clamp(16px, 5vw, 64px);
+}
+
+.section {
+display: grid;
+grid-template-columns: 1fr;              /* mobile-first: stack */
+gap: var(--gap);
+align-items: center;
+margin: var(--section-margin) auto;
+padding: var(--section-pad);
+max-width: var(--page-max);
+}
+
+.text-section {
+padding: clamp(8px, 2vw, 24px);
+}
+
+.text-section h1 {
+margin: 0 0 0.5em 0;
+font-size: clamp(1.25rem, 2.8vw, 2rem);
+line-height: 1.2;
+}
+
+.text-section p {
+margin: 0;
+font-size: clamp(0.98rem, 1.2vw, 1.05rem);
+line-height: 1.65;
+}
+
+.image-section img {
+width: 100%;
+height: auto;
+max-width: 800px;                        /* limits desktop image width */
+border-radius: var(--radius);
+display: block;
+margin: 0 auto;
+}
+
+/* Tablet and up: two columns */
+@media (min-width: 768px) {
+.section {
+    grid-template-columns: 1fr 1fr;
+}
+.section--flip .text-section {
+    order: 2;                              /* put text on the right */
+}
+.section--flip .image-section {
+    order: 1;                              /* image on the left */
+}
+}
+
+/* Subtle hover for links (keeps your color) */
+.text-section a {
+color: #6366f1;
+text-decoration: none;
+}
+.text-section a:hover {
+text-decoration: underline;
+}
+
+.section.section--full { grid-template-columns: 1fr !important; }
+.section.section--full > * { grid-column: 1 / -1; }
