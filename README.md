@@ -68,13 +68,10 @@ The codebase is inspired by [alexzhou907/DDBM](https://github.com/alexzhou907/DD
 If you find this method and/or code useful, please consider giving a star 🌟 and citing the paper:
 ```
 @article{li2025diffusion,
-        title={Diffusion Bridge Networks Simulate Clinical-grade PET from MRI for Dementia Diagnostics}, 
-        author={Yitong Li and Ralph Buchert and Benita Schmitz-Koep and Timo Grimmer and Björn Ommer and Dennis M. Hedderich and Igor Yakushev and Christian Wachinger},
-        year={2025},
-        eprint={2510.15556},
-        archivePrefix={arXiv},
-        primaryClass={cs.CV},
-        url={https://arxiv.org/abs/2510.15556}, 
-      }
+  title={Diffusion Bridge Networks Simulate Clinical-grade PET from MRI for Dementia Diagnostics},
+  author={Li, Yitong and Buchert, Ralph and Schmitz-Koep, Benita and Grimmer, Timo and Ommer, Bj{\"o}rn and Hedderich, Dennis M and Yakushev, Igor and Wachinger, Christian},
+  journal={arXiv preprint arXiv:2510.15556},
+  year={2025}
+}
 ```
 
