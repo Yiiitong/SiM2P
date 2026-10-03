@@ -60,6 +60,38 @@ body {
   font-weight: bold;
 }
 
+.publication-accepted {
+  margin: -0.5rem 0 1.5rem;
+}
+
+.publication-accepted a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  border: 1px solid #c7d2fe;
+  border-radius: 9999px;
+  background: #eef2ff;
+  color: #4338ca;
+  font-family: 'Google Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.publication-accepted a:hover {
+  background: #e0e7ff;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.25);
+  color: #4338ca;
+  text-decoration: none;
+}
+
+.publication-accepted em {
+  font-style: italic;
+}
+
 .publication-awards {
   color: #ff3860;
   width: fit-content;
